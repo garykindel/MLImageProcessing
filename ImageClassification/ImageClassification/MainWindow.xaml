@@ -1,0 +1,25 @@
+﻿<Window x:Class="ImageClassification.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageClassification"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+        <StackPanel Orientation="Horizontal" Background="LightGray">
+            <StackPanel>
+                <Button x:Name="btnSelectImage" Click="btnSelectImage_Click" Content="Select Image"/>
+                <Button x:Name="btnProcessImage" Click="btnProcessImage_Click"  Content="Classify Image"/>
+            </StackPanel>
+            <StackPanel>
+                <Viewbox Stretch="UniformToFill">
+                <Image x:Name="img" Stretch="UniformToFill">
+                    <Image.LayoutTransform>
+                        <ScaleTransform ScaleX="0.5" ScaleY="0.5" />
+                    </Image.LayoutTransform>
+                </Image>
+            </Viewbox>
+                <TextBox x:Name="txtResult" TextWrapping ="Wrap" AcceptsReturn="True" MinHeight="50" />
+            </StackPanel>
+         </StackPanel>         
+</Window>
