@@ -11,15 +11,14 @@
                 <Button x:Name="btnSelectImage" Click="btnSelectImage_Click" Content="Select Image"/>
                 <Button x:Name="btnProcessImage" Click="btnProcessImage_Click"  Content="Classify Image"/>
             </StackPanel>
-            <StackPanel>
-                <Viewbox Stretch="UniformToFill">
-                <Image x:Name="img" Stretch="UniformToFill">
-                    <Image.LayoutTransform>
-                        <ScaleTransform ScaleX="0.5" ScaleY="0.5" />
-                    </Image.LayoutTransform>
-                </Image>
-            </Viewbox>
-                <TextBox x:Name="txtResult" TextWrapping ="Wrap" AcceptsReturn="True" MinHeight="50" />
-            </StackPanel>
+           
+            <Viewbox  VerticalAlignment="Top" HorizontalAlignment="Stretch" Stretch="Fill" StretchDirection="DownOnly">
+                <Viewbox Stretch="Fill" Width="Auto" Height="Auto">
+                    <StackPanel>
+                        <Image x:Name="img" Stretch="Uniform"/>
+                        <TextBox x:Name="txtResult" TextWrapping ="Wrap" AcceptsReturn="True" MinHeight="50" />
+                    </StackPanel>
+                </Viewbox>
+            </Viewbox>                  
          </StackPanel>         
 </Window>
